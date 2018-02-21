@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+	<meta charset="utf-8" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="validation.js"> </script>
+    <style>
+        form {
+            max-width:320px;
+            width:100%;
+            background:rgba(7, 40, 195, 0.8);
+            padding: 20px 20px;
+            border: 2px solid #0099ff; 
+            box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+            margin-left:400px;margin-top:50px
+        }
+        button {
+            color: #ffffff;
+            background-color: #0099ff;
+            width: 100%;
+            padding: 10px 15px;
+            position: center;
+        }
+        .form button:hover, .form:active{
+            background:#43A047
+        }
+    </style>
+   
+</head>
+<body>
+     
+        <form action="" method="get" enctype="application/x-www-form-urlencoded">
+            <p>Login</p>
+            <input type="text" name="username" id="txtusername" placeholder="Username" />
+            
+            <input type="password" name="password" id="txtpassword" placeholder="Password" /><br />
+            <input type="button" id="btnLogin" value="Login" onclick="validate_field_login();LoginAccount()" />
+           
+            <p>Not a member?<a href="CreateAccount.html" style="color:white">Create Account</a></p>
+        </form>
+  
+</body>
+</html>

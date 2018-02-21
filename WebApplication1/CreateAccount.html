@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+	<meta charset="utf-8" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="validation.js"></script>
+    <style>
+     form{
+        max-width:320px;
+        width:100%;
+        background:rgba(7, 40, 195, 0.8);
+        padding: 20px 20px;
+        border: 2px solid #0099ff; 
+        box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+        margin-left:400px;margin-top:20px   
+     }
+     button{
+        color:#ffffff;
+        background-color:#0099ff;
+        width:100%;
+        padding:10px 15px;
+        position:center
+     }
+     .form button:hover, .form:active{
+            background:#43A047
+        }
+    </style>
+</head>
+<body>     
+    <form action="" method="get"
+          enctype="application/x-www-form-urlencoded">
+        <p>Create Account</p>
+        <input type="text" name="name" id="txtname" placeholder="Name" />
+        <input type="text" name="streetNo" id="txtstreetNo" placeholder="Street Number " />
+        <input type="text" name="streetName" id="txtstreetName" placeholder="Street Name " />
+        <input type="text" name="city" id="txtcity" placeholder="City " />
+        <input type="text" name="province" id="txtprovince" placeholder="Province " />
+        <input type="text" name="postalCode" id="txtpostalCode" placeholder="Postal Code" />
+        <input type="text" name="phoneNumber" id="txtphoneNumber" placeholder="Phone Number" />
+        <input type="text" name="email" id="txtemail" placeholder="Email" />
+        <input type="text" name="username" id="txtusername" placeholder="Username" />
+        <input type="password" name="password" id="txtpassword" placeholder="Password" /><br />
+        <input type="button" id="btnAccount" value="Create" onclick="validate_field_Account();CreateAccount()" />
+        
+        <p>Already a member?<a href="Login.html" style="color:white">Login</a>  </p>
+
+      </form>
+</body>
+</html>

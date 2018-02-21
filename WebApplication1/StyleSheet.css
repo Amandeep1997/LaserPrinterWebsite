@@ -1,0 +1,25 @@
+﻿ body{
+        background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(Printer.jpg);
+        height:100vh;
+        background-size:cover;
+        background-position:center;
+        }
+ input{
+        outline:thin;
+        width:100%;
+        border:1px solid #0e2eeb;
+        border-bottom:1px solid #003399;
+        padding: 10px 15px;
+        box-sizing:border-box;
+        position:center; 
+        }
+ p{
+        font-family:'Times New Roman'; font-size:large; color:#ffffff;
+        line-height:2px;
+        margin:0px 0px 0px;
+        padding:10px 15px;
+        text-align:center;
+ }
+ .val_error{
+     color:#f31919
+ }

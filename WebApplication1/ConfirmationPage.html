@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+         body{
+        background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(Printer.jpg);
+        height:100vh;
+        background-size:cover;
+        background-position:center;
+        }
+        #header {
+            background: #24a79b;
+            height: 100px;
+            width: 1180px;
+            padding: 20px 20px;
+            border: 2px solid #ffffff;
+            position: relative;
+        }
+        h1 {
+            color: #ffffff;
+            font-family: Arial;
+            text-align: center;
+            font-size: x-large;
+            text-transform:capitalize;
+        }
+        h2{
+            color:darkblue;
+            font-family:Tahoma;
+            text-align:center;
+            font-size:xx-large;
+            text-transform:capitalize;
+        }
+        a#signout {
+            display: block;
+            text-align: center;
+            width: 150px;
+            margin: 0px auto;
+            padding: 10px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: Arial;
+            border: 2px solid #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            float: right;
+            
+        }
+    </style>
+    <script>
+
+    var savedData = decodeURIComponent(document.cookie);
+    var dataArray = savedData.split("; ");
+    var name, streetNo, streetName, city, postalCode;
+
+    for (var i = 0; i < dataArray.length; ++i) {
+    if (dataArray[i].substring(0,dataArray[i].indexOf("=")) == "name") {
+        name = dataArray[i].substring(dataArray[i].indexOf("=") + 1, dataArray[i].length);
+    }
+    if (dataArray[i].substring(0,dataArray[i].indexOf("=")) == "streetNo") {
+        streetNo = dataArray[i].substring(dataArray[i].indexOf("=") + 1, dataArray[i].length);
+    }
+    if (dataArray[i].substring(0, dataArray[i].indexOf("=")) == "streetName") {
+        streetName = dataArray[i].substring(dataArray[i].indexOf("=") + 1, dataArray[i].length);
+    }
+    if (dataArray[i].substring(0, dataArray[i].indexOf("=")) == "city") {
+        city = dataArray[i].substring(dataArray[i].indexOf("=") + 1, dataArray[i].length);
+    }
+    if (dataArray[i].substring(0, dataArray[i].indexOf("=")) == "postalCode") {
+        postalCode = dataArray[i].substring(dataArray[i].indexOf("=") + 1, dataArray[i].length);
+    }
+    }
+
+    function date(){
+        var date = new Date();
+        document.writeln(date.getDate())
+    }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <img src="MyLogoLP.png" style="width:170px; height:110px ; float:left" />
+        <h1>Thank you for your order.</h1>
+        <a href="HomePage.html" id="signout">Log out</a>
+    </div>
+
+    <script>
+    document.write("<h1><i> You are currently logged in as Name: " + name + ".<br/>");
+    document.write("Your address is: " + streetNo + ", "+ streetName + ", " + city + ", " + postalCode + ".<i></h1>");
+    </script>
+    <h1> Your Order has been Placed successfully, It will be deliver to the above address.<br />
+         Your Order Confirmation Email will include shipment details,product availability<br />
+         and estimated tax.</h1>
+
+</body>
+</html>
